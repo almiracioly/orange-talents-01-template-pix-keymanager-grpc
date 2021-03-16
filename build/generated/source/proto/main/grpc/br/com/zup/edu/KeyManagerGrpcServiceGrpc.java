@@ -58,6 +58,37 @@ public final class KeyManagerGrpcServiceGrpc {
     return getSendMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<br.com.zup.edu.StoreKeyRequest,
+      br.com.zup.edu.StoreKeyResponse> getStoreKeyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "storeKey",
+      requestType = br.com.zup.edu.StoreKeyRequest.class,
+      responseType = br.com.zup.edu.StoreKeyResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<br.com.zup.edu.StoreKeyRequest,
+      br.com.zup.edu.StoreKeyResponse> getStoreKeyMethod() {
+    io.grpc.MethodDescriptor<br.com.zup.edu.StoreKeyRequest, br.com.zup.edu.StoreKeyResponse> getStoreKeyMethod;
+    if ((getStoreKeyMethod = KeyManagerGrpcServiceGrpc.getStoreKeyMethod) == null) {
+      synchronized (KeyManagerGrpcServiceGrpc.class) {
+        if ((getStoreKeyMethod = KeyManagerGrpcServiceGrpc.getStoreKeyMethod) == null) {
+          KeyManagerGrpcServiceGrpc.getStoreKeyMethod = getStoreKeyMethod =
+              io.grpc.MethodDescriptor.<br.com.zup.edu.StoreKeyRequest, br.com.zup.edu.StoreKeyResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "storeKey"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  br.com.zup.edu.StoreKeyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  br.com.zup.edu.StoreKeyResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new KeyManagerGrpcServiceMethodDescriptorSupplier("storeKey"))
+              .build();
+        }
+      }
+    }
+    return getStoreKeyMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -113,6 +144,13 @@ public final class KeyManagerGrpcServiceGrpc {
       asyncUnimplementedUnaryCall(getSendMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void storeKey(br.com.zup.edu.StoreKeyRequest request,
+        io.grpc.stub.StreamObserver<br.com.zup.edu.StoreKeyResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getStoreKeyMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -122,6 +160,13 @@ public final class KeyManagerGrpcServiceGrpc {
                 br.com.zup.edu.KeyManagerGrpcRequest,
                 br.com.zup.edu.KeyManagerGrpcReply>(
                   this, METHODID_SEND)))
+          .addMethod(
+            getStoreKeyMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                br.com.zup.edu.StoreKeyRequest,
+                br.com.zup.edu.StoreKeyResponse>(
+                  this, METHODID_STORE_KEY)))
           .build();
     }
   }
@@ -147,6 +192,14 @@ public final class KeyManagerGrpcServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getSendMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void storeKey(br.com.zup.edu.StoreKeyRequest request,
+        io.grpc.stub.StreamObserver<br.com.zup.edu.StoreKeyResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getStoreKeyMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -168,6 +221,13 @@ public final class KeyManagerGrpcServiceGrpc {
     public br.com.zup.edu.KeyManagerGrpcReply send(br.com.zup.edu.KeyManagerGrpcRequest request) {
       return blockingUnaryCall(
           getChannel(), getSendMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public br.com.zup.edu.StoreKeyResponse storeKey(br.com.zup.edu.StoreKeyRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getStoreKeyMethod(), getCallOptions(), request);
     }
   }
 
@@ -192,9 +252,18 @@ public final class KeyManagerGrpcServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getSendMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<br.com.zup.edu.StoreKeyResponse> storeKey(
+        br.com.zup.edu.StoreKeyRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getStoreKeyMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND = 0;
+  private static final int METHODID_STORE_KEY = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -216,6 +285,10 @@ public final class KeyManagerGrpcServiceGrpc {
         case METHODID_SEND:
           serviceImpl.send((br.com.zup.edu.KeyManagerGrpcRequest) request,
               (io.grpc.stub.StreamObserver<br.com.zup.edu.KeyManagerGrpcReply>) responseObserver);
+          break;
+        case METHODID_STORE_KEY:
+          serviceImpl.storeKey((br.com.zup.edu.StoreKeyRequest) request,
+              (io.grpc.stub.StreamObserver<br.com.zup.edu.StoreKeyResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -279,6 +352,7 @@ public final class KeyManagerGrpcServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeyManagerGrpcServiceFileDescriptorSupplier())
               .addMethod(getSendMethod())
+              .addMethod(getStoreKeyMethod())
               .build();
         }
       }

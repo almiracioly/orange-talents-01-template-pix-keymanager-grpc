@@ -9,6 +9,7 @@ package br.com.zup.edu;
 
 service KeyManagerGrpcService {
   rpc send (KeyManagerGrpcRequest) returns (KeyManagerGrpcReply) {}
+  rpc storeKey(StoreKeyRequest) returns (StoreKeyResponse) {}
 }
 
 message KeyManagerGrpcRequest {
@@ -17,4 +18,23 @@ message KeyManagerGrpcRequest {
 
 message KeyManagerGrpcReply {
   string message = 1;
+}
+
+message StoreKeyRequest {
+  string owner_id = 1;
+  KeyType key_type = 2;
+  string value = 3;
+  BankAccountType account_type = 4;
+}
+
+enum KeyType {
+  CPF = 0; PHONE = 1; EMAIL = 2; RANDOM = 3;
+}
+
+enum BankAccountType {
+  SAVING = 0; CHECKING = 1;
+}
+
+message StoreKeyResponse {
+  string pix_id = 1;
 }

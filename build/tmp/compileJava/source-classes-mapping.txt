@@ -17,6 +17,18 @@ br/com/zup/edu/KeyManagerGrpcRequest.java
  br.com.zup.edu.KeyManagerGrpcRequest$Builder
 br/com/zup/edu/KeyManagerGrpc.java
  br.com.zup.edu.KeyManagerGrpc
+br/com/zup/edu/StoreKeyRequestOrBuilder.java
+ br.com.zup.edu.StoreKeyRequestOrBuilder
+br/com/zup/edu/StoreKeyResponse.java
+ br.com.zup.edu.StoreKeyResponse
+ br.com.zup.edu.StoreKeyResponse$1
+ br.com.zup.edu.StoreKeyResponse$Builder
+br/com/zup/edu/StoreKeyRequest.java
+ br.com.zup.edu.StoreKeyRequest
+ br.com.zup.edu.StoreKeyRequest$1
+ br.com.zup.edu.StoreKeyRequest$Builder
+br/com/zup/edu/StoreKeyResponseOrBuilder.java
+ br.com.zup.edu.StoreKeyResponseOrBuilder
 br/com/zup/edu/KeyManagerGrpcReply.java
  br.com.zup.edu.KeyManagerGrpcReply
  br.com.zup.edu.KeyManagerGrpcReply$1
@@ -25,3 +37,9 @@ br/com/zup/edu/KeyManagerGrpcReplyOrBuilder.java
  br.com.zup.edu.KeyManagerGrpcReplyOrBuilder
 br/com/zup/edu/KeyManagerGrpcRequestOrBuilder.java
  br.com.zup.edu.KeyManagerGrpcRequestOrBuilder
+br/com/zup/edu/KeyType.java
+ br.com.zup.edu.KeyType
+ br.com.zup.edu.KeyType$1
+br/com/zup/edu/BankAccountType.java
+ br.com.zup.edu.BankAccountType
+ br.com.zup.edu.BankAccountType$1
