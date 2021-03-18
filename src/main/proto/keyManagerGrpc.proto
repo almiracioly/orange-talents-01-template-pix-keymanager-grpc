@@ -12,6 +12,10 @@ service KeyManagerGrpcService {
   rpc storeKey(StoreKeyRequest) returns (StoreKeyResponse) {}
 }
 
+service KeyManagerRemovePixKey {
+  rpc removeKey(RemoveKeyRequest) returns (RemoveKeyResponse) {}
+}
+
 message KeyManagerGrpcRequest {
   string name = 1;
 }
@@ -37,4 +41,13 @@ enum BankAccountType {
 
 message StoreKeyResponse {
   string pix_id = 1;
+}
+
+message RemoveKeyRequest {
+  int64 pix_id = 1;
+  string owner_id = 2;
+}
+
+message RemoveKeyResponse {
+  string message = 1;
 }

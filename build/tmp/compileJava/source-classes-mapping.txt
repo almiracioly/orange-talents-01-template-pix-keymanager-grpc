@@ -1,3 +1,41 @@
+br/com/zup/edu/RemoveKeyResponseOrBuilder.java
+ br.com.zup.edu.RemoveKeyResponseOrBuilder
+br/com/zup/edu/KeyManagerGrpcRequest.java
+ br.com.zup.edu.KeyManagerGrpcRequest
+ br.com.zup.edu.KeyManagerGrpcRequest$1
+ br.com.zup.edu.KeyManagerGrpcRequest$Builder
+br/com/zup/edu/RemoveKeyResponse.java
+ br.com.zup.edu.RemoveKeyResponse
+ br.com.zup.edu.RemoveKeyResponse$1
+ br.com.zup.edu.RemoveKeyResponse$Builder
+br/com/zup/edu/StoreKeyResponse.java
+ br.com.zup.edu.StoreKeyResponse
+ br.com.zup.edu.StoreKeyResponse$1
+ br.com.zup.edu.StoreKeyResponse$Builder
+br/com/zup/edu/StoreKeyResponseOrBuilder.java
+ br.com.zup.edu.StoreKeyResponseOrBuilder
+br/com/zup/edu/KeyManagerGrpcReply.java
+ br.com.zup.edu.KeyManagerGrpcReply
+ br.com.zup.edu.KeyManagerGrpcReply$1
+ br.com.zup.edu.KeyManagerGrpcReply$Builder
+br/com/zup/edu/KeyManagerGrpcRequestOrBuilder.java
+ br.com.zup.edu.KeyManagerGrpcRequestOrBuilder
+br/com/zup/edu/BankAccountType.java
+ br.com.zup.edu.BankAccountType
+ br.com.zup.edu.BankAccountType$1
+br/com/zup/edu/KeyManagerRemovePixKeyGrpc.java
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$1
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$2
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$3
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$KeyManagerRemovePixKeyBaseDescriptorSupplier
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$KeyManagerRemovePixKeyBlockingStub
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$KeyManagerRemovePixKeyFileDescriptorSupplier
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$KeyManagerRemovePixKeyFutureStub
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$KeyManagerRemovePixKeyImplBase
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$KeyManagerRemovePixKeyMethodDescriptorSupplier
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$KeyManagerRemovePixKeyStub
+ br.com.zup.edu.KeyManagerRemovePixKeyGrpc$MethodHandlers
 br/com/zup/edu/KeyManagerGrpcServiceGrpc.java
  br.com.zup.edu.KeyManagerGrpcServiceGrpc
  br.com.zup.edu.KeyManagerGrpcServiceGrpc$1
@@ -11,35 +49,22 @@ br/com/zup/edu/KeyManagerGrpcServiceGrpc.java
  br.com.zup.edu.KeyManagerGrpcServiceGrpc$KeyManagerGrpcServiceMethodDescriptorSupplier
  br.com.zup.edu.KeyManagerGrpcServiceGrpc$KeyManagerGrpcServiceStub
  br.com.zup.edu.KeyManagerGrpcServiceGrpc$MethodHandlers
-br/com/zup/edu/KeyManagerGrpcRequest.java
- br.com.zup.edu.KeyManagerGrpcRequest
- br.com.zup.edu.KeyManagerGrpcRequest$1
- br.com.zup.edu.KeyManagerGrpcRequest$Builder
+br/com/zup/edu/RemoveKeyRequestOrBuilder.java
+ br.com.zup.edu.RemoveKeyRequestOrBuilder
 br/com/zup/edu/KeyManagerGrpc.java
  br.com.zup.edu.KeyManagerGrpc
 br/com/zup/edu/StoreKeyRequestOrBuilder.java
  br.com.zup.edu.StoreKeyRequestOrBuilder
-br/com/zup/edu/StoreKeyResponse.java
- br.com.zup.edu.StoreKeyResponse
- br.com.zup.edu.StoreKeyResponse$1
- br.com.zup.edu.StoreKeyResponse$Builder
+br/com/zup/edu/RemoveKeyRequest.java
+ br.com.zup.edu.RemoveKeyRequest
+ br.com.zup.edu.RemoveKeyRequest$1
+ br.com.zup.edu.RemoveKeyRequest$Builder
 br/com/zup/edu/StoreKeyRequest.java
  br.com.zup.edu.StoreKeyRequest
  br.com.zup.edu.StoreKeyRequest$1
  br.com.zup.edu.StoreKeyRequest$Builder
-br/com/zup/edu/StoreKeyResponseOrBuilder.java
- br.com.zup.edu.StoreKeyResponseOrBuilder
-br/com/zup/edu/KeyManagerGrpcReply.java
- br.com.zup.edu.KeyManagerGrpcReply
- br.com.zup.edu.KeyManagerGrpcReply$1
- br.com.zup.edu.KeyManagerGrpcReply$Builder
 br/com/zup/edu/KeyManagerGrpcReplyOrBuilder.java
  br.com.zup.edu.KeyManagerGrpcReplyOrBuilder
-br/com/zup/edu/KeyManagerGrpcRequestOrBuilder.java
- br.com.zup.edu.KeyManagerGrpcRequestOrBuilder
 br/com/zup/edu/KeyType.java
  br.com.zup.edu.KeyType
  br.com.zup.edu.KeyType$1
-br/com/zup/edu/BankAccountType.java
- br.com.zup.edu.BankAccountType
- br.com.zup.edu.BankAccountType$1

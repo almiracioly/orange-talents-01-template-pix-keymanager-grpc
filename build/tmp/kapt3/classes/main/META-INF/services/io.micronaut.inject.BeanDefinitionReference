@@ -1,3 +1,4 @@
+br.com.zup.edu.removekey.$RemoveKeyServiceDefinitionClass
 br.com.zup.edu.storekey.$PixKeyRepository$InterceptedDefinitionClass
 br.com.zup.edu.storekey.$StoreKeyServiceDefinitionClass
 br.com.zup.edu.$HelloServiceDefinitionClass
