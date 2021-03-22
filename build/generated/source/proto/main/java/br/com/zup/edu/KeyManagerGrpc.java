@@ -61,7 +61,7 @@ public final class KeyManagerGrpc {
       "\n\005value\030\003 \001(\t\0225\n\014account_type\030\004 \001(\0162\037.br" +
       ".com.zup.edu.BankAccountType\"\"\n\020StoreKey" +
       "Response\022\016\n\006pix_id\030\001 \001(\t\"4\n\020RemoveKeyReq" +
-      "uest\022\016\n\006pix_id\030\001 \001(\003\022\020\n\010owner_id\030\002 \001(\t\"$" +
+      "uest\022\016\n\006pix_id\030\001 \001(\t\022\020\n\010owner_id\030\002 \001(\t\"$" +
       "\n\021RemoveKeyResponse\022\017\n\007message\030\001 \001(\t*4\n\007" +
       "KeyType\022\007\n\003CPF\020\000\022\t\n\005PHONE\020\001\022\t\n\005EMAIL\020\002\022\n" +
       "\n\006RANDOM\020\003*+\n\017BankAccountType\022\n\n\006SAVING\020" +

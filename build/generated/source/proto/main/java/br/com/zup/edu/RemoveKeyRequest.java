@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RemoveKeyRequest() {
+    pixId_ = "";
     ownerId_ = "";
   }
 
@@ -49,9 +50,10 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
+          case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
 
-            pixId_ = input.readInt64();
+            pixId_ = s;
             break;
           }
           case 18: {
@@ -93,14 +95,49 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PIX_ID_FIELD_NUMBER = 1;
-  private long pixId_;
+  private volatile java.lang.Object pixId_;
   /**
-   * <code>int64 pix_id = 1;</code>
+   * <pre>
+   *int64 pix_id = 1;
+   * </pre>
+   *
+   * <code>string pix_id = 1;</code>
    * @return The pixId.
    */
   @java.lang.Override
-  public long getPixId() {
-    return pixId_;
+  public java.lang.String getPixId() {
+    java.lang.Object ref = pixId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      pixId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   *int64 pix_id = 1;
+   * </pre>
+   *
+   * <code>string pix_id = 1;</code>
+   * @return The bytes for pixId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPixIdBytes() {
+    java.lang.Object ref = pixId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      pixId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int OWNER_ID_FIELD_NUMBER = 2;
@@ -155,8 +192,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (pixId_ != 0L) {
-      output.writeInt64(1, pixId_);
+    if (!getPixIdBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, pixId_);
     }
     if (!getOwnerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, ownerId_);
@@ -170,9 +207,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (pixId_ != 0L) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt64Size(1, pixId_);
+    if (!getPixIdBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, pixId_);
     }
     if (!getOwnerIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, ownerId_);
@@ -192,8 +228,8 @@ private static final long serialVersionUID = 0L;
     }
     br.com.zup.edu.RemoveKeyRequest other = (br.com.zup.edu.RemoveKeyRequest) obj;
 
-    if (getPixId()
-        != other.getPixId()) return false;
+    if (!getPixId()
+        .equals(other.getPixId())) return false;
     if (!getOwnerId()
         .equals(other.getOwnerId())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -208,8 +244,7 @@ private static final long serialVersionUID = 0L;
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PIX_ID_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        getPixId());
+    hash = (53 * hash) + getPixId().hashCode();
     hash = (37 * hash) + OWNER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOwnerId().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -345,7 +380,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      pixId_ = 0L;
+      pixId_ = "";
 
       ownerId_ = "";
 
@@ -425,8 +460,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(br.com.zup.edu.RemoveKeyRequest other) {
       if (other == br.com.zup.edu.RemoveKeyRequest.getDefaultInstance()) return this;
-      if (other.getPixId() != 0L) {
-        setPixId(other.getPixId());
+      if (!other.getPixId().isEmpty()) {
+        pixId_ = other.pixId_;
+        onChanged();
       }
       if (!other.getOwnerId().isEmpty()) {
         ownerId_ = other.ownerId_;
@@ -461,33 +497,98 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private long pixId_ ;
+    private java.lang.Object pixId_ = "";
     /**
-     * <code>int64 pix_id = 1;</code>
+     * <pre>
+     *int64 pix_id = 1;
+     * </pre>
+     *
+     * <code>string pix_id = 1;</code>
      * @return The pixId.
      */
-    @java.lang.Override
-    public long getPixId() {
-      return pixId_;
+    public java.lang.String getPixId() {
+      java.lang.Object ref = pixId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pixId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>int64 pix_id = 1;</code>
+     * <pre>
+     *int64 pix_id = 1;
+     * </pre>
+     *
+     * <code>string pix_id = 1;</code>
+     * @return The bytes for pixId.
+     */
+    public com.google.protobuf.ByteString
+        getPixIdBytes() {
+      java.lang.Object ref = pixId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pixId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     *int64 pix_id = 1;
+     * </pre>
+     *
+     * <code>string pix_id = 1;</code>
      * @param value The pixId to set.
      * @return This builder for chaining.
      */
-    public Builder setPixId(long value) {
-      
+    public Builder setPixId(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
       pixId_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>int64 pix_id = 1;</code>
+     * <pre>
+     *int64 pix_id = 1;
+     * </pre>
+     *
+     * <code>string pix_id = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearPixId() {
       
-      pixId_ = 0L;
+      pixId_ = getDefaultInstance().getPixId();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *int64 pix_id = 1;
+     * </pre>
+     *
+     * <code>string pix_id = 1;</code>
+     * @param value The bytes for pixId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPixIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      pixId_ = value;
       onChanged();
       return this;
     }

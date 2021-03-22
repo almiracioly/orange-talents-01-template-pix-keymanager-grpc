@@ -7,6 +7,7 @@ import br.com.zup.edu.storekey.PixKeyRepository
 import io.grpc.Status
 import io.grpc.stub.StreamObserver
 import io.micronaut.validation.validator.Validator
+import java.util.*
 import javax.inject.Singleton
 
 @Singleton
@@ -18,7 +19,7 @@ class RemoveKeyService(
     override fun removeKey(request: RemoveKeyRequest?, responseObserver: StreamObserver<RemoveKeyResponse>?) {
         val removeKeyRequestDataScope = RemoveKeyRequestDataScope(
             request!!.pixId,
-            request.ownerId
+            UUID.fromString(request.ownerId)
         )
 
         if (!isRequestValid(removeKeyRequestDataScope)) {
@@ -31,7 +32,7 @@ class RemoveKeyService(
             return
         }
 
-        val possiblePixKey = pixKeyRepository.findById(request.pixId)
+        val possiblePixKey = pixKeyRepository.findById(UUID.fromString(request.pixId))
         if (possiblePixKey.isEmpty) {
             responseObserver?.onError(
                 Status
@@ -43,7 +44,7 @@ class RemoveKeyService(
         }
 
         val foundPixKey = possiblePixKey.get()
-        if (foundPixKey.ownerId != request.ownerId) {
+        if (foundPixKey.ownerId != UUID.fromString(request.ownerId)) {
             responseObserver?.onError(
                 Status
                     .PERMISSION_DENIED

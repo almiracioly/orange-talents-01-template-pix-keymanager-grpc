@@ -8,10 +8,24 @@ public interface RemoveKeyRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int64 pix_id = 1;</code>
+   * <pre>
+   *int64 pix_id = 1;
+   * </pre>
+   *
+   * <code>string pix_id = 1;</code>
    * @return The pixId.
    */
-  long getPixId();
+  java.lang.String getPixId();
+  /**
+   * <pre>
+   *int64 pix_id = 1;
+   * </pre>
+   *
+   * <code>string pix_id = 1;</code>
+   * @return The bytes for pixId.
+   */
+  com.google.protobuf.ByteString
+      getPixIdBytes();
 
   /**
    * <code>string owner_id = 2;</code>

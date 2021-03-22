@@ -1,4 +1,7 @@
 br.com.zup.edu.removekey.$RemoveKeyServiceDefinitionClass
+br.com.zup.edu.storekey.$$StoreKeyDomainServiceDefinition$InterceptedDefinitionClass
 br.com.zup.edu.storekey.$PixKeyRepository$InterceptedDefinitionClass
-br.com.zup.edu.storekey.$StoreKeyServiceDefinitionClass
+br.com.zup.edu.storekey.$StoreKeyEndpointDefinitionClass
+br.com.zup.edu.shared.externalservice.erpitau.$ErpItauClient$InterceptedDefinitionClass
 br.com.zup.edu.$HelloServiceDefinitionClass
+br.com.zup.edu.storekey.$StoreKeyDomainServiceDefinitionClass
