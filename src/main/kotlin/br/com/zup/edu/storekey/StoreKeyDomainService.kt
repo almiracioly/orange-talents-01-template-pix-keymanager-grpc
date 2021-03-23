@@ -12,7 +12,7 @@ open class StoreKeyDomainService(
     @Transactional
     open fun store(newPixKeyRequest: NewPixKeyRequest): PixKey {
         if (pixKeyRepository.existsByValue(newPixKeyRequest.value!!))
-            throw PixKeyAlreadyExists("Key ${newPixKeyRequest.value} already exists")
+            throw PixKeyAlreadyExistsException("Key ${newPixKeyRequest.value} already exists")
 
         val erpItauResponse = erpItauClient.getCustomerByIdAndAccountType(
             newPixKeyRequest.ownerId!!.toString(),
