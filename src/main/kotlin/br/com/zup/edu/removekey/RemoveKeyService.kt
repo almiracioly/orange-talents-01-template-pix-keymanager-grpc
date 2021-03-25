@@ -33,6 +33,7 @@ class RemoveKeyService(
         }
 
         val possiblePixKey = pixKeyRepository.findById(UUID.fromString(request.pixId))
+        println("ID recebido: ${request.pixId}")
         if (possiblePixKey.isEmpty) {
             responseObserver?.onError(
                 Status

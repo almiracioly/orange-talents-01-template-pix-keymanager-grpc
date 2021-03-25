@@ -1,5 +1,6 @@
 package br.com.zup.edu.storekey
 
+import org.hibernate.annotations.GenericGenerator
 import java.util.*
 import javax.persistence.*
 
@@ -14,7 +15,9 @@ class PixKey(
     val associatedAccount: Account,
 ) {
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "BINARY(16)")
     val id: UUID? = null
 
 }

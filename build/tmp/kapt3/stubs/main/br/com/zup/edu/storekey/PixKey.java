@@ -7,7 +7,9 @@ import java.lang.System;
 @javax.persistence.Entity()
 public final class PixKey {
     @org.jetbrains.annotations.Nullable()
-    @javax.persistence.GeneratedValue()
+    @javax.persistence.Column(columnDefinition = "BINARY(16)")
+    @org.hibernate.annotations.GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @javax.persistence.GeneratedValue(generator = "uuid2")
     @javax.persistence.Id()
     private final java.util.UUID id = null;
     @org.jetbrains.annotations.NotNull()
