@@ -5,6 +5,7 @@ br.com.zup.edu.storekey.$StoreKeyEndpointDefinitionClass
 br.com.zup.edu.storekey.$$StoreKeyEndpointDefinition$InterceptedDefinitionClass
 br.com.zup.edu.shared.filter.$ExceptionHandlerInterceptorDefinitionClass
 br.com.zup.edu.storekey.$PixKeyAlreadyExistsExceptionHandlerDefinitionClass
+br.com.zup.edu.shared.externalservice.bcb.$BcbClient$InterceptedDefinitionClass
 br.com.zup.edu.shared.externalservice.erpitau.$ErpItauClient$InterceptedDefinitionClass
 br.com.zup.edu.shared.filter.$ExceptionHandlerResolverDefinitionClass
 br.com.zup.edu.storekey.$StoreKeyDomainServiceDefinitionClass

@@ -7,13 +7,20 @@ import javax.persistence.*
 @Entity
 @Table(name = "pix_keys")
 class PixKey(
-    val value: String,
+    value: String,
     val ownerId: UUID,
     val keyType: AllowedKeyType,
     val accountType: AllowedAccountType,
     @Embedded
     val associatedAccount: Account,
 ) {
+    var value = value
+        private set
+
+    fun update(newKeyValue: String) {
+        value = newKeyValue
+    }
+
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
