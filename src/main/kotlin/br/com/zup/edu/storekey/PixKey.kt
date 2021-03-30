@@ -1,6 +1,7 @@
 package br.com.zup.edu.storekey
 
 import org.hibernate.annotations.GenericGenerator
+import java.time.LocalDateTime
 import java.util.*
 import javax.persistence.*
 
@@ -17,8 +18,14 @@ class PixKey(
     var value = value
         private set
 
+    val createdAd: LocalDateTime = LocalDateTime.now()
+
     fun update(newKeyValue: String) {
         value = newKeyValue
+    }
+
+    fun belongsTo(ownerIdAsUuid: UUID): Boolean {
+        return this.ownerId == ownerIdAsUuid
     }
 
     @Id

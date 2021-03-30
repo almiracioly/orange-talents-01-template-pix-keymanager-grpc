@@ -8,12 +8,11 @@ import io.grpc.stub.StreamObserver
 import javax.inject.Singleton
 
 
-@ErrorHandler
 @Singleton
-open class StoreKeyEndpoint(private val service: StoreKeyDomainService) :
+class StoreKeyEndpoint(private val service: StoreKeyDomainService) :
     KeyManagerGrpcServiceGrpc.KeyManagerGrpcServiceImplBase() {
 
-    open override fun storeKey(request: StoreKeyRequest?, responseObserver: StreamObserver<StoreKeyResponse>?) {
+    override fun storeKey(request: StoreKeyRequest?, responseObserver: StreamObserver<StoreKeyResponse>?) {
         val newPixKeyRequest: NewPixKeyRequest = request!!.toModel()
 
         val storedKey = service.store(newPixKeyRequest)

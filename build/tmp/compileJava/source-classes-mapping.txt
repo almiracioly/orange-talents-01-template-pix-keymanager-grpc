@@ -1,3 +1,16 @@
+br/com/zup/edu/KeyManagerShowPixKeyDetailGrpc.java
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$1
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$2
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$3
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$KeyManagerShowPixKeyDetailBaseDescriptorSupplier
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$KeyManagerShowPixKeyDetailBlockingStub
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$KeyManagerShowPixKeyDetailFileDescriptorSupplier
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$KeyManagerShowPixKeyDetailFutureStub
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$KeyManagerShowPixKeyDetailImplBase
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$KeyManagerShowPixKeyDetailMethodDescriptorSupplier
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$KeyManagerShowPixKeyDetailStub
+ br.com.zup.edu.KeyManagerShowPixKeyDetailGrpc$MethodHandlers
 br/com/zup/edu/RemoveKeyResponseOrBuilder.java
  br.com.zup.edu.RemoveKeyResponseOrBuilder
 br/com/zup/edu/KeyManagerGrpcRequest.java
@@ -14,6 +27,16 @@ br/com/zup/edu/StoreKeyResponse.java
  br.com.zup.edu.StoreKeyResponse$Builder
 br/com/zup/edu/StoreKeyResponseOrBuilder.java
  br.com.zup.edu.StoreKeyResponseOrBuilder
+br/com/zup/edu/GetPixKeyDetailRequest.java
+ br.com.zup.edu.GetPixKeyDetailRequest
+ br.com.zup.edu.GetPixKeyDetailRequest$1
+ br.com.zup.edu.GetPixKeyDetailRequest$2
+ br.com.zup.edu.GetPixKeyDetailRequest$Builder
+ br.com.zup.edu.GetPixKeyDetailRequest$FilterByPixId
+ br.com.zup.edu.GetPixKeyDetailRequest$FilterByPixId$1
+ br.com.zup.edu.GetPixKeyDetailRequest$FilterByPixId$Builder
+ br.com.zup.edu.GetPixKeyDetailRequest$FilterByPixIdOrBuilder
+ br.com.zup.edu.GetPixKeyDetailRequest$FilterCase
 br/com/zup/edu/KeyManagerGrpcReply.java
  br.com.zup.edu.KeyManagerGrpcReply
  br.com.zup.edu.KeyManagerGrpcReply$1
@@ -23,6 +46,18 @@ br/com/zup/edu/KeyManagerGrpcRequestOrBuilder.java
 br/com/zup/edu/BankAccountType.java
  br.com.zup.edu.BankAccountType
  br.com.zup.edu.BankAccountType$1
+br/com/zup/edu/GetPixKeyDetailResponse.java
+ br.com.zup.edu.GetPixKeyDetailResponse
+ br.com.zup.edu.GetPixKeyDetailResponse$1
+ br.com.zup.edu.GetPixKeyDetailResponse$AccountInfo
+ br.com.zup.edu.GetPixKeyDetailResponse$AccountInfo$1
+ br.com.zup.edu.GetPixKeyDetailResponse$AccountInfo$Builder
+ br.com.zup.edu.GetPixKeyDetailResponse$AccountInfoOrBuilder
+ br.com.zup.edu.GetPixKeyDetailResponse$Builder
+ br.com.zup.edu.GetPixKeyDetailResponse$OwnerInfo
+ br.com.zup.edu.GetPixKeyDetailResponse$OwnerInfo$1
+ br.com.zup.edu.GetPixKeyDetailResponse$OwnerInfo$Builder
+ br.com.zup.edu.GetPixKeyDetailResponse$OwnerInfoOrBuilder
 br/com/zup/edu/KeyManagerRemovePixKeyGrpc.java
  br.com.zup.edu.KeyManagerRemovePixKeyGrpc
  br.com.zup.edu.KeyManagerRemovePixKeyGrpc$1
@@ -63,8 +98,12 @@ br/com/zup/edu/StoreKeyRequest.java
  br.com.zup.edu.StoreKeyRequest
  br.com.zup.edu.StoreKeyRequest$1
  br.com.zup.edu.StoreKeyRequest$Builder
+br/com/zup/edu/GetPixKeyDetailRequestOrBuilder.java
+ br.com.zup.edu.GetPixKeyDetailRequestOrBuilder
 br/com/zup/edu/KeyManagerGrpcReplyOrBuilder.java
  br.com.zup.edu.KeyManagerGrpcReplyOrBuilder
+br/com/zup/edu/GetPixKeyDetailResponseOrBuilder.java
+ br.com.zup.edu.GetPixKeyDetailResponseOrBuilder
 br/com/zup/edu/KeyType.java
  br.com.zup.edu.KeyType
  br.com.zup.edu.KeyType$1

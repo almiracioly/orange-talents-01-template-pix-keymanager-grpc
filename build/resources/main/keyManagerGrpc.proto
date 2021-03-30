@@ -7,6 +7,8 @@ option objc_class_prefix = "HLW";
 
 package br.com.zup.edu;
 
+import "google/protobuf/timestamp.proto";
+
 service KeyManagerGrpcService {
   rpc send (KeyManagerGrpcRequest) returns (KeyManagerGrpcReply) {}
   rpc storeKey(StoreKeyRequest) returns (StoreKeyResponse) {}
@@ -14,6 +16,45 @@ service KeyManagerGrpcService {
 
 service KeyManagerRemovePixKey {
   rpc removeKey(RemoveKeyRequest) returns (RemoveKeyResponse) {}
+}
+
+service KeyManagerShowPixKeyDetail {
+  rpc showDetail(GetPixKeyDetailRequest) returns (GetPixKeyDetailResponse) {}
+}
+
+message GetPixKeyDetailRequest {
+  message FilterByPixId {
+    string ownerId = 1;
+    string pixId = 2;
+  }
+
+  oneof filter {
+    FilterByPixId pixId = 1;
+    string keyValue = 2;
+  }
+}
+
+message GetPixKeyDetailResponse {
+  //string keyValue = 1;
+  //string message  = 2;
+  string pixId                           = 1;
+  KeyType keyType                        = 2;
+  string keyValue                        = 3;
+  OwnerInfo owner                        = 4;
+  AccountInfo account                    = 5;
+  google.protobuf.Timestamp createdAt    = 6;
+
+  message OwnerInfo {
+    string name = 1;
+    string cpf = 2;
+  }
+
+  message AccountInfo {
+    string institution = 1;
+    string agencyName = 2;
+    string accountNumber = 3;
+    BankAccountType accountType = 4;
+  }
 }
 
 message KeyManagerGrpcRequest {
