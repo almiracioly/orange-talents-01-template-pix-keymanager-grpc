@@ -8,21 +8,11 @@ public interface GetPixKeyDetailResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   *string keyValue = 1;
-   *string message  = 2;
-   * </pre>
-   *
    * <code>string pixId = 1;</code>
    * @return The pixId.
    */
   java.lang.String getPixId();
   /**
-   * <pre>
-   *string keyValue = 1;
-   *string message  = 2;
-   * </pre>
-   *
    * <code>string pixId = 1;</code>
    * @return The bytes for pixId.
    */

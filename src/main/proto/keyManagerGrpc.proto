@@ -22,6 +22,24 @@ service KeyManagerShowPixKeyDetail {
   rpc showDetail(GetPixKeyDetailRequest) returns (GetPixKeyDetailResponse) {}
 }
 
+service KeyManagerListPixKeys {
+  rpc getAllPixKeys(GetAllPixKeysRequest) returns (GetAllPixKeysResponse) {}
+}
+
+message GetAllPixKeysRequest {
+  string ownerId = 1;
+}
+
+message GetAllPixKeysResponse {
+  repeated ResumedPixKeyInfo pixKeys = 1;
+}
+
+message ResumedPixKeyInfo {
+  string pixId = 1;
+  string ownerId = 2;
+  string keyValue = 3;
+}
+
 message GetPixKeyDetailRequest {
   message FilterByPixId {
     string ownerId = 1;
@@ -91,3 +109,4 @@ message RemoveKeyRequest {
 message RemoveKeyResponse {
   string message = 1;
 }
+

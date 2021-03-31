@@ -1836,11 +1836,6 @@ private static final long serialVersionUID = 0L;
   public static final int PIXID_FIELD_NUMBER = 1;
   private volatile java.lang.Object pixId_;
   /**
-   * <pre>
-   *string keyValue = 1;
-   *string message  = 2;
-   * </pre>
-   *
    * <code>string pixId = 1;</code>
    * @return The pixId.
    */
@@ -1858,11 +1853,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *string keyValue = 1;
-   *string message  = 2;
-   * </pre>
-   *
    * <code>string pixId = 1;</code>
    * @return The bytes for pixId.
    */
@@ -2443,11 +2433,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object pixId_ = "";
     /**
-     * <pre>
-     *string keyValue = 1;
-     *string message  = 2;
-     * </pre>
-     *
      * <code>string pixId = 1;</code>
      * @return The pixId.
      */
@@ -2464,11 +2449,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *string keyValue = 1;
-     *string message  = 2;
-     * </pre>
-     *
      * <code>string pixId = 1;</code>
      * @return The bytes for pixId.
      */
@@ -2486,11 +2466,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *string keyValue = 1;
-     *string message  = 2;
-     * </pre>
-     *
      * <code>string pixId = 1;</code>
      * @param value The pixId to set.
      * @return This builder for chaining.
@@ -2506,11 +2481,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *string keyValue = 1;
-     *string message  = 2;
-     * </pre>
-     *
      * <code>string pixId = 1;</code>
      * @return This builder for chaining.
      */
@@ -2521,11 +2491,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *string keyValue = 1;
-     *string message  = 2;
-     * </pre>
-     *
      * <code>string pixId = 1;</code>
      * @param value The bytes for pixId to set.
      * @return This builder for chaining.

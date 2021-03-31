@@ -9,6 +9,9 @@ import javax.persistence.*
 @Table(name = "pix_keys")
 class PixKey(
     value: String,
+    @GeneratedValue(generator = "uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    @Column(columnDefinition = "BINARY(16)")
     val ownerId: UUID,
     val keyType: AllowedKeyType,
     val accountType: AllowedAccountType,
