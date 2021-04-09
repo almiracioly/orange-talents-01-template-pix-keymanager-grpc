@@ -8,6 +8,7 @@ import io.grpc.stub.StreamObserver
 import javax.inject.Singleton
 
 
+@ErrorHandler
 @Singleton
 class StoreKeyEndpoint(private val service: StoreKeyDomainService) :
     KeyManagerGrpcServiceGrpc.KeyManagerGrpcServiceImplBase() {

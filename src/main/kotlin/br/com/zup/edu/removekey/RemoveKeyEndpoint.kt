@@ -3,6 +3,7 @@ package br.com.zup.edu.removekey
 import br.com.zup.edu.KeyManagerRemovePixKeyGrpc
 import br.com.zup.edu.RemoveKeyRequest
 import br.com.zup.edu.RemoveKeyResponse
+import br.com.zup.edu.shared.customannotation.errorhandler.ErrorHandler
 import br.com.zup.edu.shared.externalservice.bcb.BcbClient
 import br.com.zup.edu.shared.externalservice.bcb.DeletePixKeyRequest
 import br.com.zup.edu.storekey.PixKeyRepository
@@ -14,6 +15,7 @@ import java.lang.IllegalStateException
 import java.util.*
 import javax.inject.Singleton
 
+@ErrorHandler
 @Singleton
 class RemoveKeyEndpoint(
     private val beanValidator: Validator,
@@ -39,7 +41,7 @@ class RemoveKeyEndpoint(
         }
 
         val possiblePixKey = pixKeyRepository.findById(UUID.fromString(request.pixId))
-        println("ID recebido: ${request.pixId}")
+
         if (possiblePixKey.isEmpty) {
             responseObserver?.onError(
                 Status

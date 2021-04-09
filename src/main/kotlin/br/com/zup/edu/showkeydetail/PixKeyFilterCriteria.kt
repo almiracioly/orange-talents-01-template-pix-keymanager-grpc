@@ -2,11 +2,11 @@ package br.com.zup.edu.showkeydetail
 
 import br.com.zup.edu.shared.exception.PixKeyNotFoundException
 import br.com.zup.edu.shared.externalservice.bcb.BcbClient
+import br.com.zup.edu.storekey.AccountOwnerNotFoundException
 import br.com.zup.edu.storekey.PixKeyRepository
 import io.micronaut.core.annotation.Introspected
 import io.micronaut.http.HttpStatus
 import org.slf4j.LoggerFactory
-import java.lang.IllegalArgumentException
 import java.util.*
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.Size
@@ -26,11 +26,13 @@ sealed class PixKeyFilterCriteria {
         private fun ownerIdAsUuid(): UUID = UUID.fromString(ownerId)
 
         override fun filter(repository: PixKeyRepository, bcbClient: BcbClient): PixKeyInfo {
-            return repository
+            val foundPixKey = repository
                 .findById(pixIdAsUuid())
-                .filter { it.belongsTo(ownerIdAsUuid()) }
-                .map(PixKeyInfo::of)
-                .orElseThrow { PixKeyNotFoundException() }
+
+            if (foundPixKey.isEmpty) throw PixKeyNotFoundException()
+            if(!foundPixKey.get().belongsTo(ownerIdAsUuid())) throw AccountOwnerNotFoundException("Account Owner not found")
+
+            return PixKeyInfo.of(foundPixKey.get())
         }
     }
 

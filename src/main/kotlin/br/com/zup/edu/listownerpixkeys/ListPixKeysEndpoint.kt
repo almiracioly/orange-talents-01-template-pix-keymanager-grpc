@@ -4,6 +4,7 @@ import br.com.zup.edu.GetAllPixKeysRequest
 import br.com.zup.edu.GetAllPixKeysResponse
 import br.com.zup.edu.KeyManagerListPixKeysGrpc
 import br.com.zup.edu.ResumedPixKeyInfo
+import br.com.zup.edu.shared.customannotation.errorhandler.ErrorHandler
 import br.com.zup.edu.storekey.AccountOwnerNotFoundException
 import br.com.zup.edu.storekey.PixKey
 import br.com.zup.edu.storekey.PixKeyRepository
@@ -11,6 +12,7 @@ import io.grpc.stub.StreamObserver
 import java.util.*
 import javax.inject.Singleton
 
+@ErrorHandler
 @Singleton
 class ListPixKeysEndpoint(private val pixKeyRepository: PixKeyRepository) :
     KeyManagerListPixKeysGrpc.KeyManagerListPixKeysImplBase() {
